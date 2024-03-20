@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+<body>
+
+  <div id="app">
+    <div class="result">
+      <h1>Your Result</h1>
+      
+      <div id="average">
+        <h2>{{ average }}</h2>
+        <p>of 100</p>
+      </div>
+
+      <h3>{{ grade }}</h3>
+
+      <p>You scored higher than {{ ranking }} of the people who have taken these tests.</p>
+    </div>
+    <div class="summary">
+      <h1>Summary</h1>
+
+      <div>
+        <img src="./assets/images/icon-reaction.svg"/>
+        <h4>Reaction</h4>
+
+        <h4 class="score">{{ score[0] }}</h4>
+        <div class="footer">/ 100</div>
+      </div>
+      <div>
+        <img src="./assets/images/icon-reaction.svg"/>
+        <h4>Reaction</h4>
+
+        <h4 class="score">{{ score[1] }}</h4>
+        <div class="footer">/ 100</div>
+      </div>
+      <div>
+        <img src="./assets/images/icon-reaction.svg"/>
+        <h4>Reaction</h4>
+
+        <h4 class="score">{{ score[2] }}</h4>
+        <div class="footer">/ 100</div>
+      </div>
+      <div>
+        <img src="./assets/images/icon-reaction.svg"/>
+        <h4>Reaction</h4>
+
+        <h4 class="score">{{ score[3] }}</h4>
+        <div class="footer">/ 100</div>
+      </div>
+
+      <input type="submit" value="Continue"/>
+    </div>
+  </div>
+
+  <br/>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">uKai</a>.
+  </div>
+
+  <script src="./main.js"></script>
+  <script type="module" src="./data.json">
+    import scoreData from './data.json'
+    export default {
+      data(){ return {
+        scoreData,
+      }},
+    }
+  </script>
+</body>
+</html>
