@@ -2,7 +2,9 @@ const app = new Vue({
   el: '#app',
 
   data: {
-    score: [],
+    score: [
+      80, 92, 61, 72
+    ],
   },
   computed: {
     average() {
@@ -11,7 +13,7 @@ const app = new Vue({
         result += this.score[i];
       }
 
-      return result / 4;
+      return Math.round( result / 4 );
     },
     grade() {
       if ( this.average === 100 ) {
@@ -30,23 +32,4 @@ const app = new Vue({
       return '65%';
     },
   },
-
-  methods: {
-    fetchData() {
-      // Fetch data from JSON file using fetch API
-      fetch('./data.json')
-        .then(response => response.json())
-        .then(data => {
-          // Assign fetched data to the 'score' property
-          this.score = data.score;
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
-    },
-  },
-
-  created() {
-    this.fetchData();
-  }
 });

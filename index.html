@@ -30,36 +30,36 @@
     <div class="summary">
       <h1>Summary</h1>
 
-      <div>
+      <div id="reaction">
         <img src="./assets/images/icon-reaction.svg"/>
         <h4>Reaction</h4>
-
+        <div class="breaker"></div>
         <h4 class="score">{{ score[0] }}</h4>
-        <div class="footer">/ 100</div>
+        <h4 class="footer">/ 100</h4>
       </div>
-      <div>
-        <img src="./assets/images/icon-reaction.svg"/>
-        <h4>Reaction</h4>
-
+      <div id="memory">
+        <img src="./assets/images/icon-memory.svg"/>
+        <h4>Memory</h4>
+        <div class="breaker"></div>
         <h4 class="score">{{ score[1] }}</h4>
-        <div class="footer">/ 100</div>
+        <h4 class="footer">/ 100</h4>
       </div>
-      <div>
-        <img src="./assets/images/icon-reaction.svg"/>
-        <h4>Reaction</h4>
-
+      <div id="verbal">
+        <img src="./assets/images/icon-verbal.svg"/>
+        <h4>Verbal</h4>
+        <div class="breaker"></div>
         <h4 class="score">{{ score[2] }}</h4>
-        <div class="footer">/ 100</div>
+        <h4 class="footer">/ 100</h4>
       </div>
-      <div>
-        <img src="./assets/images/icon-reaction.svg"/>
-        <h4>Reaction</h4>
-
+      <div id="visual">
+        <img src="./assets/images/icon-visual.svg"/>
+        <h4>Visual</h4>
+        <div class="breaker"></div>
         <h4 class="score">{{ score[3] }}</h4>
-        <div class="footer">/ 100</div>
+        <h4 class="footer">/ 100</h4>
       </div>
 
-      <input type="submit" value="Continue"/>
+      <input id="cont" type="submit" value="Continue"/>
     </div>
   </div>
 
@@ -71,13 +71,5 @@
   </div>
 
   <script src="./main.js"></script>
-  <script type="module" src="./data.json">
-    import scoreData from './data.json'
-    export default {
-      data(){ return {
-        scoreData,
-      }},
-    }
-  </script>
 </body>
 </html>
